@@ -1,0 +1,19 @@
+<p>
+  User Login
+</p>
+
+<div>
+  <label for=username>Username</label>
+  <input type="text" #username>
+  <br>
+  <br>
+  <label for="password">Password</label>
+  <input type="password" #password>
+  <br>
+  <br>
+  <button (click)="validateUser(username.value,password.value)">Sign In</button>
+</div>
+<div *ngIf="response">
+  <app-heroes></app-heroes>
+</div>
+
