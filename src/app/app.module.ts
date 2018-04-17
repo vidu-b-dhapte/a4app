@@ -12,6 +12,8 @@ import { AboutComponent } from './components/about/about.component';
 import { LoginComponent } from './components/login/login.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
+import { HeroService }  from './hero.service';
+
 
 const appRoutes:Routes=[
   {path:'',component:UserComponent},
@@ -36,7 +38,7 @@ const appRoutes:Routes=[
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [DataService],
+  providers: [DataService,HeroService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
